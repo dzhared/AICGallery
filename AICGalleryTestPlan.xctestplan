@@ -1,0 +1,34 @@
+{
+  "configurations" : [
+    {
+      "id" : "52429C0D-FE59-4769-890F-CB0B8D4874F2",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "skippedTests" : [
+        "AICGalleryUITests\/testLaunchPerformance()"
+      ],
+      "target" : {
+        "containerPath" : "container:AICGallery.xcodeproj",
+        "identifier" : "7FD7F98E29DB8E72008DB905",
+        "name" : "UITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:AICGallery.xcodeproj",
+        "identifier" : "7FD7F98129DB8E67008DB905",
+        "name" : "UnitTests"
+      }
+    }
+  ],
+  "version" : 1
+}
