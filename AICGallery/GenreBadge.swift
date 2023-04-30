@@ -36,6 +36,6 @@ struct GenreBadge: View {
 
 struct GenreBadge_Previews: PreviewProvider {
     static var previews: some View {
-        GenreBadge(genre: "Arts of Asia")
+        GenreBadge(genre: Genres.artsOfAsia.rawValue)
     }
 }

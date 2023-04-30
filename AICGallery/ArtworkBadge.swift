@@ -49,17 +49,6 @@ struct ArtworkBadge: View {
 
 struct ArtworkBadge_Previews: PreviewProvider {
     static var previews: some View {
-        
-        let thumbnail = Thumbnail(altText: "Abstract painting composed of small vertical dabs of multiple shades of blue with a small area of similar...")
-        
-        ArtworkBadge(artwork: Artwork(id: 129884,
-                                      title: "Starry Night and the Astronauts",
-                                      artistTitle: "Alma Thomas",
-                                      artistDisplay: "Alma Thomas\nAmerican, 1891–1978",
-                                      dateDisplay: "1972",
-                                      mediumDisplay: "Acrylic on canvas",
-                                      imageId: "e966799b-97ee-1cc6-bd2f-a94b4b8bb8f9",
-                                      thumbnail: thumbnail,
-                                      departmentTitle: "Contemporary Art"))
+        ArtworkBadge(artwork: Artwork.example)
     }
 }

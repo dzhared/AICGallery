@@ -35,6 +35,16 @@ struct Artwork: Codable {
     }
     
     // JSONDecoder().convertFromSnakeCase used to eliminate need for CodingKey
+    
+    static let example: Artwork = Artwork(id: 129884,
+                                          title: "Starry Night and the Astronauts",
+                                          artistTitle: "Alma Thomas",
+                                          artistDisplay: "Alma Thomas\nAmerican, 1891–1978",
+                                          dateDisplay: "1972",
+                                          mediumDisplay: "Acrylic on canvas",
+                                          imageId: "e966799b-97ee-1cc6-bd2f-a94b4b8bb8f9",
+                                          thumbnail: Thumbnail(altText: "Abstract painting composed of small vertical dabs of multiple shades of blue with a small area of similar..."),
+                                          departmentTitle: "Contemporary Art")
 }
 
 // Alt text nested inside thumbnail in API response
