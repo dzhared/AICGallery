@@ -55,6 +55,6 @@ struct ArtworkGalleryView: View {
 
 struct GenreGalleryView_Previews: PreviewProvider {
     static var previews: some View {
-        ArtworkGalleryView(genre: Genres.artsOfAfrica.rawValue)
+        ArtworkGalleryView(genre: Genre.artsOfAfrica.rawValue)
     }
 }
