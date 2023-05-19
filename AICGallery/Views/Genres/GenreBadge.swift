@@ -31,7 +31,6 @@ struct GenreBadge: View {
             .padding(.horizontal)
         }
         .accessibilityIdentifier("genreBadge")
-        .accessibilityAddTraits(.isButton)
     }
 }
 

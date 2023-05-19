@@ -14,7 +14,6 @@ struct ArtworkBadge: View {
     var body: some View {
         NavigationLink(destination: ArtworkDetailView(artwork: artwork)) {
             VStack(alignment: .leading) {
-                // Artwork
                 AsyncImage(url: artwork.imageURL) { image in
                     image
                         .resizable()
@@ -26,8 +25,6 @@ struct ArtworkBadge: View {
                         .frame(maxWidth: .infinity)
                 }
                 .accessibilityLabel(artwork.altText)
-                
-                // Label
                 HStack {
                     VStack(alignment: .leading, spacing: 5) {
                         Text(artwork.title)
@@ -47,7 +44,6 @@ struct ArtworkBadge: View {
             }
             .padding(.horizontal)
         }
-        .accessibilityAddTraits(.isButton)
     }
 }
 

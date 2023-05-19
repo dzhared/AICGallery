@@ -14,12 +14,12 @@ struct Response: Codable {
 }
 
 struct Artwork: Codable {
-    let id: Int                     // ID unique to AIC database
-    let title: String               // Artwork title
-    let artistTitle: String?        // Artist name only
-    let artistDisplay: String?      // Artist, nationality, birth/death years
-    let dateDisplay: String?        // Descriptive date, i.e. "Late 1970s"
-    let mediumDisplay: String?      // Artwork medium formatted as string
+    let id: Int
+    let title: String
+    let artistTitle: String?
+    let artistDisplay: String?
+    let dateDisplay: String?
+    let mediumDisplay: String?
     let imageId: String?            // Used to populate imageURL for AsyncImage
     let thumbnail: Thumbnail?       // Used to retrieve alt text
     let departmentTitle: String?    // Used for testing genre search
@@ -33,6 +33,8 @@ struct Artwork: Codable {
         // filtered out in ArtworkGalleryView but have a Placeholder() by default.
         URL(string: "https://www.artic.edu/iiif/2/\(imageId ?? "66c4dafb-2f53-f5ac-b676-32cafbe5b6bd")/full/843,/0/default.jpg")!
     }
+    
+    // JSONDecoder().convertFromSnakeCase used to eliminate need for CodingKey
     
     static let example: Artwork = Artwork(id: 129884,
                                           title: "Starry Night and the Astronauts",

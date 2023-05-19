@@ -124,6 +124,7 @@
 		7FD7F99029DB8E72008DB905 /* UITests */ = {
 			isa = PBXGroup;
 			children = (
+				7FF2CA142A18010F00763D90 /* Views */,
 				7FD7F99129DB8E72008DB905 /* AICGalleryUITests.swift */,
 			);
 			path = UITests;
@@ -132,6 +133,9 @@
 		7FE9735629DB632F0001E3C0 /* AICGallery */ = {
 			isa = PBXGroup;
 			children = (
+				7FF2CA1D2A18012E00763D90 /* Tests */,
+				7FF2CA1C2A18012600763D90 /* Models */,
+				7FF2CA182A18011A00763D90 /* Views */,
 				7FE9735829DB632F0001E3C0 /* AICGalleryApp.swift */,
 				7FE9736529DB632F0001E3C0 /* ContentView.swift */,
 				7FE9735929DB632F0001E3C0 /* SplashScreenView.swift */,
@@ -156,6 +160,83 @@
 				7FE9735E29DB632F0001E3C0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7FF2CA142A18010F00763D90 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7FF2CA152A18010F00763D90 /* Artwork */,
+				7FF2CA162A18010F00763D90 /* Genres */,
+				7FF2CA172A18010F00763D90 /* Utilities */,
+			);
+			name = Views;
+			path = AICGallery/Views;
+			sourceTree = SOURCE_ROOT;
+		};
+		7FF2CA152A18010F00763D90 /* Artwork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Artwork;
+			sourceTree = "<group>";
+		};
+		7FF2CA162A18010F00763D90 /* Genres */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Genres;
+			sourceTree = "<group>";
+		};
+		7FF2CA172A18010F00763D90 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7FF2CA182A18011A00763D90 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7FF2CA192A18011A00763D90 /* Artwork */,
+				7FF2CA1A2A18011A00763D90 /* Genres */,
+				7FF2CA1B2A18011A00763D90 /* Utilities */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7FF2CA192A18011A00763D90 /* Artwork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Artwork;
+			sourceTree = "<group>";
+		};
+		7FF2CA1A2A18011A00763D90 /* Genres */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Genres;
+			sourceTree = "<group>";
+		};
+		7FF2CA1B2A18011A00763D90 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7FF2CA1C2A18012600763D90 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7FF2CA1D2A18012E00763D90 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
