@@ -14,6 +14,7 @@ struct ArtworkBadge: View {
     var body: some View {
         NavigationLink(destination: ArtworkDetailView(artwork: artwork)) {
             VStack(alignment: .leading) {
+                // Artwork with placeholder as needed
                 AsyncImage(url: artwork.imageURL) { image in
                     image
                         .resizable()
@@ -25,6 +26,8 @@ struct ArtworkBadge: View {
                         .frame(maxWidth: .infinity)
                 }
                 .accessibilityLabel(artwork.altText)
+                
+                // Title and artist
                 HStack {
                     VStack(alignment: .leading, spacing: 5) {
                         Text(artwork.title)

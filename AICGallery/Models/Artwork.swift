@@ -14,12 +14,12 @@ struct Response: Codable {
 }
 
 struct Artwork: Codable {
-    let id: Int
-    let title: String
-    let artistTitle: String?
-    let artistDisplay: String?
-    let dateDisplay: String?
-    let mediumDisplay: String?
+    let id: Int                     // Unique identifier in AIC database
+    let title: String               // Title of work
+    let artistTitle: String?        // Artist name only
+    let artistDisplay: String?      // Name, nationality, birth and death
+    let dateDisplay: String?        // Dates formatted as string, i.e., "late 1970s"
+    let mediumDisplay: String?      // Artwork's medium and details
     let imageId: String?            // Used to populate imageURL for AsyncImage
     let thumbnail: Thumbnail?       // Used to retrieve alt text
     let departmentTitle: String?    // Used for testing genre search
@@ -36,20 +36,22 @@ struct Artwork: Codable {
     
     // JSONDecoder().convertFromSnakeCase used to eliminate need for CodingKey
     
-    static let example: Artwork = Artwork(id: 129884,
+    static let example = Artwork(id: 129884,
                                           title: "Starry Night and the Astronauts",
                                           artistTitle: "Alma Thomas",
                                           artistDisplay: "Alma Thomas\nAmerican, 1891–1978",
                                           dateDisplay: "1972",
                                           mediumDisplay: "Acrylic on canvas",
                                           imageId: "e966799b-97ee-1cc6-bd2f-a94b4b8bb8f9",
-                                          thumbnail: Thumbnail(altText: "Abstract painting composed of small vertical dabs of multiple shades of blue with a small area of similar..."),
+                                          thumbnail: Thumbnail.example,
                                           departmentTitle: "Contemporary Art")
 }
 
 // Alt text nested inside thumbnail in API response
 struct Thumbnail: Codable {
     let altText: String?
+    
+    static let example = Thumbnail(altText: "Abstract painting composed of small vertical dabs of multiple shades of blue with a small area of similar strokes of red, orange, and yellow in the upper right.")
 }
 
 // MARK: Functions
@@ -61,6 +63,7 @@ func getArtworks(for genre: String?, limit: Int, completion: @escaping ([Artwork
     urlComponents.queryItems = [
         URLQueryItem(name: "q", value: genre),
         URLQueryItem(name: "limit", value: String(limit)),
+        URLQueryItem(name: "query[term][is_public_domain]", value: "true"), // Limit to public domain only
         URLQueryItem(name: "fields", value: [
             "id",
             "title",

@@ -17,7 +17,7 @@ struct ArtworkDetailView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                // Image
+                // Artwork with placeholder as needed
                 AsyncImage(url: artwork.imageURL) { image in
                     image
                         .resizable()
@@ -28,7 +28,7 @@ struct ArtworkDetailView: View {
                     ProgressView()
                 }
                 
-                // Placard
+                // Placard with artwork details
                 HStack {
                     VStack(alignment: .leading, spacing: 10) {
                         Group {
@@ -51,6 +51,7 @@ struct ArtworkDetailView: View {
                             Text("The data in this response is licensed under a Creative Commons Zero (CC0) 1.0 designation and the Terms and Conditions of artic.edu.")
                                 .footnoteSerif
                         }
+                        .accessibilityHidden(true)
                     }
                     .multilineTextAlignment(.leading)
                     Spacer()

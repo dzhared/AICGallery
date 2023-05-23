@@ -17,6 +17,11 @@ struct ContentView: View {
                     }
                     .accessibilityIdentifier("featuredGallery")
                 
+                SearchResultsView()
+                    .tabItem {
+                        Label("Search", systemImage: "magnifyingglass")
+                    }
+                
                 GenreListView()
                     .tabItem {
                         Label("Genres", systemImage: "paintpalette")

@@ -15,9 +15,12 @@ struct GenreBadge: View {
     var body: some View {
         NavigationLink(destination: ArtworkGalleryView(genre: genre)) {
             ZStack(alignment: .bottomLeading) {
+                // Representative image for genre
                 Image(genre)
                     .resizable()
                     .scaledToFill()
+                
+                // Genre title
                 Text(genre)
                     .headlineSerif
                     .lineLimit(2)

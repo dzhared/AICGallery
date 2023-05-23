@@ -8,6 +8,7 @@
 import Foundation
 
 enum Genre: String, CaseIterable {
+    // Enumerates all categories given in database
     case architectureAndDesign = "Architecture and Design"
     case artsOfAfrica = "Arts of Africa"
     case artsOfTheAmericas = "Arts of the Americas"
