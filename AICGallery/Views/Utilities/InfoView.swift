@@ -9,17 +9,19 @@ import SwiftUI
 
 struct InfoView: View {
     var body: some View {
-        ScrollView {
+        VStack {
             Text("About")
-                .titleSerif
-            Divider()
-            Text(infoViewText)
-            .bodySerif
-            LinkButton(text: "Creative Commons", url: URL(string: "https://creativecommons.org/publicdomain/zero/1.0/")!)
-            LinkButton(text: "AIC Terms & Conditions", url: URL(string: "https://www.artic.edu/terms")!)
+                .title2Serif
+            ScrollView {
+                Divider()
+                Text(infoViewText)
+                    .bodySerif
+                LinkButton(text: "Creative Commons", url: URL(string: "https://creativecommons.org/publicdomain/zero/1.0/")!)
+                LinkButton(text: "AIC Terms & Conditions", url: URL(string: "https://www.artic.edu/terms")!)
+            }
+            .padding(.horizontal)
+            .multilineTextAlignment(.leading)
         }
-        .padding(.horizontal)
-        .multilineTextAlignment(.leading)
     }
 }
 

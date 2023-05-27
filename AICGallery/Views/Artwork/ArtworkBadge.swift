@@ -43,6 +43,7 @@ struct ArtworkBadge: View {
                 .padding()
                 .background(.thinMaterial)
                 .clipShape(RoundedRectangle(cornerRadius: 5))
+                // TODO: Fine-tune this for spacing / alignment
                 .offset(x: 0, y: -30)
             }
             .padding(.horizontal)

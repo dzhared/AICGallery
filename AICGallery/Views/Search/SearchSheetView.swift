@@ -12,7 +12,7 @@ struct SearchSheetView: View {
     @Binding var searchText: String
     @Environment(\.dismiss) var dismiss
     @State private var selectedGenre: Genre = .architectureAndDesign
-    @State private var showingGenre = true
+    @State private var showingGenre = false
     
     var body: some View {
         NavigationView {

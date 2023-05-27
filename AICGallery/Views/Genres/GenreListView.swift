@@ -9,12 +9,14 @@ import SwiftUI
 
 struct GenreListView: View {
     var body: some View {
-        ScrollView {
-            VStack {
-                Text("All Genres")
-                    .font(.system(.title, design: .serif))
-                ForEach(Genre.allCases, id: \.self) { genre in
-                    GenreBadge(genre: genre.rawValue)
+        VStack {
+            Text("All Genres")
+                .title2Serif
+            ScrollView {
+                VStack {
+                    ForEach(Genre.allCases, id: \.self) { genre in
+                        GenreBadge(genre: genre.rawValue)
+                    }
                 }
             }
         }

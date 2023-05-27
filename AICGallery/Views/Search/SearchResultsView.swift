@@ -10,50 +10,68 @@ import SwiftUI
 struct SearchResultsView: View {
     
     @State private var showingSearchView = false
-    @State private var searchText: String = ""
+    @State private var searchText: String = "Henri de Toulouse-Lautrec"
     @State private var searchedArtworks = [Artwork]()
     let genre: Genre? = nil
     
     var body: some View {
-        ScrollView {
+        NavigationView {
             VStack {
-                // "Featured" page also uses ArtworkGalleryView instead of making redundant view
-                Text(searchText)
-                    .titleSerif
-                    .multilineTextAlignment(.center)
-                ForEach(searchedArtworks, id: \.id) { artwork in
-                    if artwork.imageId != nil {
-                        ArtworkBadge(artwork: artwork)
+                ZStack {
+                    Text(searchText)
+                        .title2Serif
+                        .multilineTextAlignment(.center)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
+                        .frame(maxWidth: .infinity)
+                        .padding(.horizontal, 50)
+                    HStack {
+                        Spacer()
+                        Button {
+                            showingSearchView = true
+                        } label: {
+                            Image(systemName: "magnifyingglass")
+                                .font(.title2)
+                        }
+                        .padding(.trailing)
                     }
                 }
-                
-                // Manually load images if first attempt fails
+                ScrollView {
+                    // "Featured" page also uses ArtworkGalleryView instead of making redundant view
+                    ForEach(searchedArtworks, id: \.id) { artwork in
+                        if artwork.imageId != nil {
+                            ArtworkBadge(artwork: artwork)
+                        }
+                    }
+                    
+                    // Manually load images if first attempt fails
+                    if searchedArtworks.isEmpty {
+                        Button {
+                            showingSearchView = true
+                        } label: {
+                            Text("Tap to search.")
+                                .headlineSerif
+                                .padding()
+                                .background(.thinMaterial)
+                                .clipShape(RoundedRectangle(cornerRadius: 5))
+                        }
+                    }
+                }
+            }
+            .onAppear {
                 if searchedArtworks.isEmpty {
-                    Button {
-                        showingSearchView = true
-                    } label: {
-                        Text("Tap to search.")
-                            .headlineSerif
-                            .padding()
-                            .background(.thinMaterial)
-                            .clipShape(RoundedRectangle(cornerRadius: 5))
+                    showingSearchView = true
+                }
+            }
+            .sheet(isPresented: $showingSearchView, onDismiss: {
+                if !searchText.isEmpty {
+                    getArtworks(for: searchText, limit: 20) { artworks in
+                        searchedArtworks = artworks
                     }
                 }
+            }) {
+                SearchSheetView(searchText: $searchText)
             }
-        }
-        .onAppear {
-            if searchedArtworks.isEmpty {
-                showingSearchView = true
-            }
-        }
-        .sheet(isPresented: $showingSearchView, onDismiss: {
-            if !searchText.isEmpty {
-                getArtworks(for: searchText, limit: 20) { artworks in
-                    searchedArtworks = artworks
-                }
-            }
-        }) {
-            SearchSheetView(searchText: $searchText)
         }
     }
 }

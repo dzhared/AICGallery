@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    init() {
+        // Corrects bug of translucent tab bar background turning transparent
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithDefaultBackground()
+        UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+    }
+    
     var body: some View {
         NavigationView {
             TabView {
