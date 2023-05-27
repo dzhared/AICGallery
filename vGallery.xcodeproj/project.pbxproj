@@ -46,7 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7FA3FD9429D608C3002934AF /* AICGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AICGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FA3FD9429D608C3002934AF /* vGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FD17DE52A1815A90083C3B7 /* SearchResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsView.swift; sourceTree = "<group>"; };
 		7FD7F92D29DB6AE7008DB905 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7FD7F98229DB8E67008DB905 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,7 +112,7 @@
 		7FA3FD9529D608C3002934AF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7FA3FD9429D608C3002934AF /* AICGallery.app */,
+				7FA3FD9429D608C3002934AF /* vGallery.app */,
 				7FD7F98229DB8E67008DB905 /* UnitTests.xctest */,
 				7FD7F98F29DB8E72008DB905 /* UITests.xctest */,
 			);
@@ -259,9 +259,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7FA3FD9329D608C3002934AF /* AICGallery */ = {
+		7FA3FD9329D608C3002934AF /* vGallery */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7FA3FDA229D608C4002934AF /* Build configuration list for PBXNativeTarget "AICGallery" */;
+			buildConfigurationList = 7FA3FDA229D608C4002934AF /* Build configuration list for PBXNativeTarget "vGallery" */;
 			buildPhases = (
 				7FA3FD9029D608C3002934AF /* Sources */,
 				7FA3FD9129D608C3002934AF /* Frameworks */,
@@ -271,9 +271,9 @@
 			);
 			dependencies = (
 			);
-			name = AICGallery;
+			name = vGallery;
 			productName = "aic-art-search";
-			productReference = 7FA3FD9429D608C3002934AF /* AICGallery.app */;
+			productReference = 7FA3FD9429D608C3002934AF /* vGallery.app */;
 			productType = "com.apple.product-type.application";
 		};
 		7FD7F98129DB8E67008DB905 /* UnitTests */ = {
@@ -335,7 +335,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7FA3FD8F29D608C3002934AF /* Build configuration list for PBXProject "AICGallery" */;
+			buildConfigurationList = 7FA3FD8F29D608C3002934AF /* Build configuration list for PBXProject "vGallery" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -348,7 +348,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7FA3FD9329D608C3002934AF /* AICGallery */,
+				7FA3FD9329D608C3002934AF /* vGallery */,
 				7FD7F98129DB8E67008DB905 /* UnitTests */,
 				7FD7F98E29DB8E72008DB905 /* UITests */,
 			);
@@ -425,12 +425,12 @@
 /* Begin PBXTargetDependency section */
 		7FD7F98729DB8E68008DB905 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7FA3FD9329D608C3002934AF /* AICGallery */;
+			target = 7FA3FD9329D608C3002934AF /* vGallery */;
 			targetProxy = 7FD7F98629DB8E68008DB905 /* PBXContainerItemProxy */;
 		};
 		7FD7F99629DB8E72008DB905 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7FA3FD9329D608C3002934AF /* AICGallery */;
+			target = 7FA3FD9329D608C3002934AF /* vGallery */;
 			targetProxy = 7FD7F99529DB8E72008DB905 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -561,7 +561,7 @@
 				DEVELOPMENT_TEAM = N33Z6K7M73;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "AIC Gallery";
+				INFOPLIST_KEY_CFBundleDisplayName = vGallery;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -575,7 +575,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = hoerr.jared.AICGallery;
+				PRODUCT_BUNDLE_IDENTIFIER = hoerr.jared.vGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -597,7 +597,7 @@
 				DEVELOPMENT_TEAM = N33Z6K7M73;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "AIC Gallery";
+				INFOPLIST_KEY_CFBundleDisplayName = vGallery;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -611,7 +611,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = hoerr.jared.AICGallery;
+				PRODUCT_BUNDLE_IDENTIFIER = hoerr.jared.vGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -637,7 +637,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AICGallery.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AICGallery";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vGallery.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/vGallery";
 			};
 			name = Debug;
 		};
@@ -656,7 +656,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AICGallery.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AICGallery";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vGallery.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/vGallery";
 			};
 			name = Release;
 		};
@@ -699,7 +699,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7FA3FD8F29D608C3002934AF /* Build configuration list for PBXProject "AICGallery" */ = {
+		7FA3FD8F29D608C3002934AF /* Build configuration list for PBXProject "vGallery" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7FA3FDA029D608C4002934AF /* Debug */,
@@ -708,7 +708,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7FA3FDA229D608C4002934AF /* Build configuration list for PBXNativeTarget "AICGallery" */ = {
+		7FA3FDA229D608C4002934AF /* Build configuration list for PBXNativeTarget "vGallery" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7FA3FDA329D608C4002934AF /* Debug */,

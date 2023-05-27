@@ -1,16 +1,16 @@
-#  Art Institute of Chicago Gallery
+#  vGallery
 
 ##  About
 
 This app is a virtual gallery of art retrieved from the Art Institute of Chicago's digital collection.
 
-Using the app is simple: just open the app and browse either the currently featured artwork or by genre. Categories are laid out clearly in the All Genres tab on the bottom tab bar.
+Using the app is simple: just open the app and browse either the currently featured artwork or by genre. Additionally, the Search function can be used to search by keyword or artist. Categories are laid out clearly in the All Genres tab on the bottom tab bar.
 
 Information about each work can be seen by tapping on an individual work. These are inspired by placards in the actual museum and include descriptive text.
 
 To run the app, simply clone the git repository, open the Xcode project and press Run.
 
-I have no affiliation with the AIC. (But it's a great museum!)
+I have no affiliation with the Art Institute of Chicago. (But it's a great museum!)
 
 ##  Process
 
