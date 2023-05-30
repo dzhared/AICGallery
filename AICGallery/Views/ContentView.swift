@@ -36,6 +36,11 @@ struct ContentView: View {
                     }
                     .accessibilityIdentifier("genresButton")
                 
+                FavoritesView()
+                    .tabItem {
+                        Label("Favorites", systemImage: "star")
+                    }
+                
                 InfoView()
                     .tabItem {
                         Label("About", systemImage: "info.circle")

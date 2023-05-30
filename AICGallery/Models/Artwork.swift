@@ -13,7 +13,7 @@ struct Response: Codable {
     let data: [Artwork]
 }
 
-struct Artwork: Codable {
+struct Artwork: Codable, Equatable {
     let id: Int                     // Unique identifier in AIC database
     let title: String               // Title of work
     let artistTitle: String?        // Artist name only
@@ -32,6 +32,10 @@ struct Artwork: Codable {
         // Returns URL for AsyncImage. Artwork structs without an imageId are
         // filtered out in ArtworkGalleryView but have a Placeholder() by default.
         URL(string: "https://www.artic.edu/iiif/2/\(imageId ?? "66c4dafb-2f53-f5ac-b676-32cafbe5b6bd")/full/843,/0/default.jpg")!
+    }
+    
+    static func == (lhs: Artwork, rhs: Artwork) -> Bool {
+        return lhs.id == rhs.id
     }
     
     // JSONDecoder().convertFromSnakeCase used to eliminate need for CodingKey
@@ -63,7 +67,6 @@ func getArtworks(for genre: String?, limit: Int, completion: @escaping ([Artwork
     urlComponents.queryItems = [
         URLQueryItem(name: "q", value: genre),
         URLQueryItem(name: "limit", value: String(limit)),
-        URLQueryItem(name: "query[term][is_public_domain]", value: "true"), // Limit to public domain only
         URLQueryItem(name: "fields", value: [
             "id",
             "title",
