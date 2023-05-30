@@ -25,6 +25,7 @@ struct SearchResultsView: View {
                         .truncationMode(.tail)
                         .frame(maxWidth: .infinity)
                         .padding(.horizontal, 50)
+                        .padding(.top, 7)
                     HStack {
                         Spacer()
                         Button {

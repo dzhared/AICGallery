@@ -18,6 +18,7 @@ struct ArtworkGalleryView: View {
             Text(genre ?? "Featured")
                 .title2Serif
                 .multilineTextAlignment(.center)
+                .padding(.top, 7) // Centers title vertically 
             ScrollView {
                 VStack {
                     // "Featured" page also uses ArtworkGalleryView instead of making redundant view

@@ -11,25 +11,19 @@ struct SearchSheetView: View {
     
     @Binding var searchText: String
     @Environment(\.dismiss) var dismiss
+    @State private var numberResults = 30.0
     @State private var selectedGenre: Genre = .architectureAndDesign
-    @State private var showingGenre = false
     
     var body: some View {
         NavigationView {
             Form {
                 TextField("Search", text: $searchText)
-                Group {
-                    Toggle("Select a genre", isOn: $showingGenre)
-                    if showingGenre {
-                        withAnimation(.easeInOut) {
-                            Picker("Genre", selection: $selectedGenre) {
-                                ForEach(Genre.allCases, id: \.self) { genre in
-                                    Text(genre.rawValue)
-                                }
-                            }
-                        }
-                    }
+                HStack(spacing: 20) {
+                    Text("Results:")
+                    Slider(value: $numberResults, in: 5...50, step: 5)
+                    Text("\(numberResults.formatted())")
                 }
+                
                 Button("Search") { dismiss() }
             }
         }
@@ -38,6 +32,6 @@ struct SearchSheetView: View {
 
 struct SearchSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchSheetView(searchText: .constant("Preview Text"))
+        SearchSheetView(searchText: .constant(""))
     }
 }

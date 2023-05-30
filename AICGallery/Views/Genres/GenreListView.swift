@@ -12,6 +12,7 @@ struct GenreListView: View {
         VStack {
             Text("All Genres")
                 .title2Serif
+                .padding(.top, 7)
             ScrollView {
                 VStack {
                     ForEach(Genre.allCases, id: \.self) { genre in
