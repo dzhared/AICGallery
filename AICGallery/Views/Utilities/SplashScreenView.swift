@@ -20,7 +20,7 @@ struct SplashScreenView: View {
             VStack {
                 VStack(spacing: 20) {
                     Image("SplashScreenIcon")
-                    Text("Virtuart") // AIC asked not to use their name in title or branding
+                    Text("ArtSearch") // AIC asked not to use their name in title or branding
                         .titleSerif
                         .foregroundColor(.primary.opacity(0.80))
                         .multilineTextAlignment(.center)

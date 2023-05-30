@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7FA3FD9329D608C3002934AF"
-               BuildableName = "vGallery.app"
-               BlueprintName = "vGallery"
-               ReferencedContainer = "container:vGallery.xcodeproj">
+               BuildableName = "ArtSearch.app"
+               BlueprintName = "ArtSearch"
+               ReferencedContainer = "container:ArtSearch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,7 +42,7 @@
                BlueprintIdentifier = "7FFD3B5029D6930A006B93BE"
                BuildableName = "AICGalleryTests.xctest"
                BlueprintName = "AICGalleryTests"
-               ReferencedContainer = "container:vGallery.xcodeproj">
+               ReferencedContainer = "container:ArtSearch.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -53,7 +53,7 @@
                BlueprintIdentifier = "7F648A1B29D8BDC60057AE8C"
                BuildableName = "ArtworkTests.xctest"
                BlueprintName = "ArtworkTests"
-               ReferencedContainer = "container:vGallery.xcodeproj">
+               ReferencedContainer = "container:ArtSearch.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -64,7 +64,7 @@
                BlueprintIdentifier = "7F9589E529DA5D0800C9358D"
                BuildableName = "ArtworkGalleryViewUITests.xctest"
                BlueprintName = "ArtworkGalleryViewUITests"
-               ReferencedContainer = "container:vGallery.xcodeproj">
+               ReferencedContainer = "container:ArtSearch.xcodeproj">
             </BuildableReference>
             <SkippedTests>
                <Test
@@ -80,7 +80,7 @@
                BlueprintIdentifier = "7FF2C06D29DB467B00A31AA8"
                BuildableName = "ArtSearchUITests.xctest"
                BlueprintName = "ArtSearchUITests"
-               ReferencedContainer = "container:vGallery.xcodeproj">
+               ReferencedContainer = "container:ArtSearch.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -90,7 +90,7 @@
                BlueprintIdentifier = "7FFD3B5029D6930A006B93BE"
                BuildableName = "AICGalleryTests.xctest"
                BlueprintName = "AICGalleryTests"
-               ReferencedContainer = "container:vGallery.xcodeproj">
+               ReferencedContainer = "container:ArtSearch.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -101,7 +101,7 @@
                BlueprintIdentifier = "7FD7F93529DB8B3E008DB905"
                BuildableName = "AICGalleryUITests.xctest"
                BlueprintName = "AICGalleryUITests"
-               ReferencedContainer = "container:vGallery.xcodeproj">
+               ReferencedContainer = "container:ArtSearch.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -111,7 +111,7 @@
                BlueprintIdentifier = "7FFD3B5029D6930A006B93BE"
                BuildableName = "AICGalleryTests.xctest"
                BlueprintName = "AICGalleryTests"
-               ReferencedContainer = "container:vGallery.xcodeproj">
+               ReferencedContainer = "container:ArtSearch.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -121,7 +121,7 @@
                BlueprintIdentifier = "7FFD3B5029D6930A006B93BE"
                BuildableName = "AICGalleryTests.xctest"
                BlueprintName = "AICGalleryTests"
-               ReferencedContainer = "container:vGallery.xcodeproj">
+               ReferencedContainer = "container:ArtSearch.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -131,7 +131,7 @@
                BlueprintIdentifier = "7FFD3B5029D6930A006B93BE"
                BuildableName = "AICGalleryTests.xctest"
                BlueprintName = "AICGalleryTests"
-               ReferencedContainer = "container:vGallery.xcodeproj">
+               ReferencedContainer = "container:ArtSearch.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -142,7 +142,7 @@
                BlueprintIdentifier = "7FD7F98E29DB8E72008DB905"
                BuildableName = "UITests.xctest"
                BlueprintName = "UITests"
-               ReferencedContainer = "container:vGallery.xcodeproj">
+               ReferencedContainer = "container:ArtSearch.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -152,7 +152,7 @@
                BlueprintIdentifier = "7FD7F98E29DB8E72008DB905"
                BuildableName = "UITests.xctest"
                BlueprintName = "UITests"
-               ReferencedContainer = "container:vGallery.xcodeproj">
+               ReferencedContainer = "container:ArtSearch.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -163,7 +163,7 @@
                BlueprintIdentifier = "7FD7F95729DB8D11008DB905"
                BuildableName = "AICGalleryUnitTests.xctest"
                BlueprintName = "AICGalleryUnitTests"
-               ReferencedContainer = "container:vGallery.xcodeproj">
+               ReferencedContainer = "container:ArtSearch.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -174,7 +174,7 @@
                BlueprintIdentifier = "7FD7F98129DB8E67008DB905"
                BuildableName = "UnitTests.xctest"
                BlueprintName = "UnitTests"
-               ReferencedContainer = "container:vGallery.xcodeproj">
+               ReferencedContainer = "container:ArtSearch.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -194,9 +194,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7FA3FD9329D608C3002934AF"
-            BuildableName = "vGallery.app"
-            BlueprintName = "vGallery"
-            ReferencedContainer = "container:vGallery.xcodeproj">
+            BuildableName = "ArtSearch.app"
+            BlueprintName = "ArtSearch"
+            ReferencedContainer = "container:ArtSearch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -211,9 +211,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7FA3FD9329D608C3002934AF"
-            BuildableName = "vGallery.app"
-            BlueprintName = "vGallery"
-            ReferencedContainer = "container:vGallery.xcodeproj">
+            BuildableName = "ArtSearch.app"
+            BlueprintName = "ArtSearch"
+            ReferencedContainer = "container:ArtSearch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
