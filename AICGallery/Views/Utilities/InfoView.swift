@@ -12,6 +12,7 @@ struct InfoView: View {
         VStack {
             Text("About")
                 .title2Serif
+                .padding(.top, 7)
             ScrollView {
                 Divider()
                 Text(infoViewText)
@@ -26,7 +27,7 @@ struct InfoView: View {
 }
 
 private let infoViewText = """
-This app is designed to create a virtual \"gallery\" of artwork from the Art Institute of Chicago. All works are part of AIC's collections and are retrieved directly from the API.\n\nThe data in all responses is licensed under a Creative Commons Zero (CC0) 1.0 designation and the Terms and Conditions of artic.edu.\n\nPlease see the following pages for additional information on licensing.\n
+This app is designed to search for artwork from the Art Institute of Chicago's public API. All works are part of AIC's collections and are retrieved directly from the API.\n\nThe data in all responses is licensed under a Creative Commons Zero (CC0) 1.0 designation and the Terms and Conditions of artic.edu.\n\nI am in no way affiliated with the Art Institute of Chicago.\n\nPlease see the following pages for additional information on licensing.\n
 """
 
 struct InfoView_Previews: PreviewProvider {

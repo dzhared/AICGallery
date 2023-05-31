@@ -9,15 +9,24 @@ import SwiftUI
 
 struct SearchSheetView: View {
     
-    @Binding var searchText: String
     @Environment(\.dismiss) var dismiss
-    @State private var numberResults = 30.0
+    @Binding var searchText: String
+    @Binding var numberResults: Double
     @State private var selectedGenre: Genre = .architectureAndDesign
     
     var body: some View {
         NavigationView {
             Form {
-                TextField("Search", text: $searchText)
+                ZStack(alignment: .trailing) {
+                    TextField("Search", text: $searchText)
+                    if !searchText.isEmpty {
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundColor(.secondary)
+                            .onTapGesture {
+                                searchText = ""
+                            }
+                    }
+                }
                 HStack(spacing: 20) {
                     Text("Results:")
                     Slider(value: $numberResults, in: 5...50, step: 5)
@@ -26,12 +35,17 @@ struct SearchSheetView: View {
                 
                 Button("Search") { dismiss() }
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Done") { dismiss() }
+                }
+            }
         }
     }
 }
 
 struct SearchSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchSheetView(searchText: .constant(""))
+        SearchSheetView(searchText: .constant(""), numberResults: .constant(20))
     }
 }

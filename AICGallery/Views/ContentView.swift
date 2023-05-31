@@ -29,6 +29,7 @@ struct ContentView: View {
                     .tabItem {
                         Label("Search", systemImage: "magnifyingglass")
                     }
+                    .accessibilityIdentifier("artworkSearch")
                 
                 GenreListView()
                     .tabItem {
@@ -40,6 +41,7 @@ struct ContentView: View {
                     .tabItem {
                         Label("Favorites", systemImage: "star")
                     }
+                    .accessibilityIdentifier("favorites")
                 
                 InfoView()
                     .tabItem {

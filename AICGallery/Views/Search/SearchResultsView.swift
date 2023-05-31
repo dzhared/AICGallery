@@ -9,8 +9,9 @@ import SwiftUI
 
 struct SearchResultsView: View {
     
+    @State private var numberResults = 20.0
     @State private var showingSearchView = false
-    @State private var searchText: String = "Henri de Toulouse-Lautrec"
+    @State private var searchText: String = ""
     @State private var searchedArtworks = [Artwork]()
     let genre: Genre? = nil
     
@@ -18,7 +19,7 @@ struct SearchResultsView: View {
         NavigationView {
             VStack {
                 ZStack {
-                    Text(searchText)
+                    Text(searchText.isEmpty ? "Search" : searchText)
                         .title2Serif
                         .multilineTextAlignment(.center)
                         .lineLimit(1)
@@ -66,12 +67,14 @@ struct SearchResultsView: View {
             }
             .sheet(isPresented: $showingSearchView, onDismiss: {
                 if !searchText.isEmpty {
-                    getArtworks(for: searchText, limit: 20) { artworks in
+                    getArtworks(for: searchText, limit: Int(numberResults.rounded())) { artworks in
                         searchedArtworks = artworks
                     }
+                } else {
+                    searchedArtworks = []
                 }
             }) {
-                SearchSheetView(searchText: $searchText)
+                SearchSheetView(searchText: $searchText, numberResults: $numberResults)
             }
         }
     }

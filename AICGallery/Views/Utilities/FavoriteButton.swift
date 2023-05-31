@@ -21,10 +21,10 @@ struct FavoriteButton: View {
             .padding()
             .onTapGesture {
                 withAnimation(.easeOut(duration: 0.15)) {
-                    isFavorite.toggle()
+                    isFavorite.toggle() // Toggle button's appearance
                 }
                 
-                dataManager.toggle(artwork)
+                dataManager.toggle(artwork) // Add or remove from favorites accordingly
             }
     }
 }
