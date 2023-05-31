@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "52429C0D-FE59-4769-890F-CB0B8D4874F2",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ArtSearch.xcodeproj",
+        "identifier" : "7FBD47132A27073500887D5B",
+        "name" : "ArtSearchTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:ArtSearch.xcodeproj",
+        "identifier" : "7FE816832A27100B00C99FB3",
+        "name" : "ArtSearchUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

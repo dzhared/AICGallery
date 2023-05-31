@@ -1,23 +1,31 @@
 //
-//  AICGalleryUnitTests.swift
-//  AICGalleryUnitTests
+//  ArtSearchTests.swift
+//  ArtSearchTests
 //
-//  Created by Jared on 3/30/23.
+//  Created by Jared on 5/30/23.
 //
 
 import XCTest
 
-@testable import AICGallery
+@testable import ArtSearch
 
-final class AICGalleryUnitTests: XCTestCase {
-    
+final class ArtSearchTests: XCTestCase {
+
+    override func setUpWithError() throws {
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+
+    override func tearDownWithError() throws {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+
     func testNumberArtworksRetrieved() throws {
         // Test that limit given in GET request returns correct number artworks
         let expectedNumber = 20
         var retrievedArtworks = [Artwork]()
         let expectation = XCTestExpectation(description: "\(retrievedArtworks.count) of \(expectedNumber) retrieved")
         
-        for genre in Genres.allCases {
+        for genre in Genre.allCases {
             getArtworks(for: genre.rawValue, limit: expectedNumber) { artworks in
                 retrievedArtworks = artworks
                 XCTAssertEqual(expectedNumber, retrievedArtworks.count)
@@ -93,5 +101,5 @@ final class AICGalleryUnitTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 5.0)
     }
-    
+
 }
